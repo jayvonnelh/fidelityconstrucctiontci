@@ -191,23 +191,39 @@ header {
     display: flex;
     min-height: calc(100vh - 90px);
     align-items: center;
-}
-
+   
 .hero-content {
     width: 90%;
-    max-width: 1180px;
+    max-width: 1200px;
+    height: calc(100vh - 90px);
+
     margin: 0 auto;
-    padding: 90px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
 
 .hero h1 {
-    max-width: 900px;
-    margin-bottom: 25px;
-    color: var(--white);
-    font-size: clamp(3rem, 7vw, 6.5rem);
+
+    color: white;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    font-family: var(--heading-font);
+
     font-weight: 800;
-    letter-spacing: -0.04em;
+
+    line-height: 1.1;
+
     text-transform: uppercase;
+
+    margin-bottom: 25px;
+
+    max-width: 900px;
 }
 
 .hero p {
