@@ -169,22 +169,29 @@ header {
    HERO SECTION
 ================================================== */
 
-.hero {
-    min-height: 100vh;
-    margin-top: 90px;
+.hero{
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(4, 20, 50, 0.92) 0%,
-            rgba(4, 20, 50, 0.72) 50%,
-            rgba(4, 20, 50, 0.28) 100%
-        ),
-        url("images/hero.jpg");
+    position:relative;
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+    rgba(7,28,73,.55),
+    rgba(7,28,73,.55)
+    ),
+    url("images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
 }
 
 .hero-overlay {
@@ -231,19 +238,15 @@ header {
 
 }
 
-.hero p {
+.hero p{
 
-    color: rgba(255,255,255,0.9);
+    color:rgba(255,255,255,.92);
 
-    font-size: 1.1rem;
+    font-size:20px;
 
-    text-align: center;
+    line-height:1.8;
 
-    max-width: 700px;
-
-    margin: 0 auto 35px;
-
-    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin-bottom:40px;
 
 }
 .hero-buttons {
@@ -275,26 +278,48 @@ header {
     transition: var(--transition);
 }
 
-.btn-primary {
-    background-color: var(--primary-blue);
-    color: var(--white);
+.btn-primary{
+
+    background:#1746A2;
+
+    color:white;
+
+    padding:18px 40px;
+
+    border-radius:4px;
+
+    transition:.3s;
+
 }
 
-.btn-primary:hover {
-    background-color: #2360d5;
-    transform: translateY(-3px);
+.btn-primary:hover{
+
+    background:#0c3585;
+
+    transform:translateY(-4px);
+
 }
 
-.btn-secondary {
-    border-color: var(--white);
-    color: var(--white);
-    background-color: transparent;
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:18px 40px;
+
+    margin-left:15px;
+
+    transition:.3s;
+
 }
 
-.btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--navy-blue);
-    transform: translateY(-3px);
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#1746A2;
+
 }
 
 
