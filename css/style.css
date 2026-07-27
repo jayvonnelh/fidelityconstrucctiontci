@@ -142,21 +142,27 @@ header {
     transition: var(--transition);
 }
 
-.nav-links a::after {
+.nav-links a:not(.instagram-link)::after {
     position: absolute;
     right: 0;
     bottom: -8px;
     left: 0;
+
     height: 2px;
+
     background-color: var(--primary-blue);
+
     content: "";
+
     transform: scaleX(0);
     transform-origin: right;
+
     transition: transform 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--primary-blue);
+.nav-links a:not(.instagram-link):hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .nav-links a:hover::after {
