@@ -134,15 +134,19 @@ header {
     gap: 34px;
 }
 
-/* Navigation links */
-
 .nav-links a {
     position: relative;
     color: #0b2868;
+    font-size: 0.95rem;
+    font-weight: 600;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Hide every underline by default */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-blue);
+}
 
 .nav-links a::after {
     content: "";
@@ -150,53 +154,46 @@ header {
     right: 0;
     bottom: -10px;
     left: 0;
-
     height: 2px;
-    background-color: #1746a2;
-
+    background-color: var(--primary-blue);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
 }
 
-/* Show underline when hovering */
-
-.nav-links a:hover::after {
-    transform: scaleX(1);
-}
-
-/* Keep underline on the current page only */
-
+.nav-links a:hover::after,
 .nav-links a.active::after {
     transform: scaleX(1);
 }
-
-/* Never underline social-media icons */
 
 .nav-links a.instagram-link::after,
 .nav-links a.whatsapp-link::after {
     display: none;
 }
-.whatsapp-link{
 
-    display:flex;
+.instagram-link,
+.whatsapp-link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--dark-blue);
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
 
-    align-items:center;
+.instagram-link:hover {
+    background-color: #e1306c;
+    color: var(--white);
+    transform: translateY(-3px);
+}
 
-    justify-content:center;
-
-    width:40px;
-
-    height:40px;
-
-    border-radius:50%;
-
-    color:#082B66;
-
-    font-size:1.35rem;
-
-    transition:0.3s ease;
-
+.whatsapp-link:hover {
+    background-color: #25d366;
+    color: var(--white);
+    transform: translateY(-3px);
 }
 
 
