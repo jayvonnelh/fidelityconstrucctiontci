@@ -644,3 +644,6 @@ footer a:hover {
     }
 }
 
+.hero {
+    background: red !important;
+}
