@@ -134,46 +134,48 @@ header {
     gap: 34px;
 }
 
+/* Navigation links */
+
 .nav-links a {
-
     position: relative;
-
+    color: #0b2868;
     text-decoration: none;
-
 }
+
+/* Hide every underline by default */
 
 .nav-links a::after {
-
     content: "";
-
     position: absolute;
-
+    right: 0;
+    bottom: -10px;
     left: 0;
 
-    bottom: -8px;
-
-    width: 100%;
-
     height: 2px;
-
-    background: #1746A2;
+    background-color: #1746a2;
 
     transform: scaleX(0);
-
-    transform-origin: left;
-
-    transition: transform .3s ease;
-
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
-.nav-links a:not(.instagram-link):not(.whatsapp-link)::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
+/* Show underline when hovering */
 
 .nav-links a:hover::after {
     transform: scaleX(1);
-    transform-origin: left;
+}
+
+/* Keep underline on the current page only */
+
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* Never underline social-media icons */
+
+.nav-links a.instagram-link::after,
+.nav-links a.whatsapp-link::after {
+    display: none;
 }
 .whatsapp-link{
 
