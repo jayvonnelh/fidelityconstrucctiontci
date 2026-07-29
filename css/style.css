@@ -134,19 +134,15 @@ header {
     gap: 34px;
 }
 
+/* Navigation links */
+
 .nav-links a {
     position: relative;
     color: #0b2868;
-    font-size: 0.95rem;
-    font-weight: 600;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--primary-blue);
-}
+/* Hide every underline by default */
 
 .nav-links a::after {
     content: "";
@@ -154,46 +150,53 @@ header {
     right: 0;
     bottom: -10px;
     left: 0;
+
     height: 2px;
-    background-color: var(--primary-blue);
+    background-color: #1746a2;
+
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
 }
 
-.nav-links a:hover::after,
+/* Show underline when hovering */
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Keep underline on the current page only */
+
 .nav-links a.active::after {
     transform: scaleX(1);
 }
+
+/* Never underline social-media icons */
 
 .nav-links a.instagram-link::after,
 .nav-links a.whatsapp-link::after {
     display: none;
 }
+.whatsapp-link{
 
-.instagram-link,
-.whatsapp-link {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: var(--dark-blue);
-    font-size: 1.25rem;
-    transition: var(--transition);
-}
+    display:flex;
 
-.instagram-link:hover {
-    background-color: #e1306c;
-    color: var(--white);
-    transform: translateY(-3px);
-}
+    align-items:center;
 
-.whatsapp-link:hover {
-    background-color: #25d366;
-    color: var(--white);
-    transform: translateY(-3px);
+    justify-content:center;
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    color:#082B66;
+
+    font-size:1.35rem;
+
+    transition:0.3s ease;
+
 }
 
 
@@ -202,11 +205,18 @@ header {
 ================================================== */
 
 .hero {
-    min-height: calc(100vh - 90px);
+    min-height: 100vh;
     margin-top: 90px;
 
-    background-color: #061d42;
-    background-image: url("https://jayvonnelh.github.io/fidelityconstructiontci/images/hero.jpg");
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4, 20, 50, 0.92) 0%,
+            rgba(4, 20, 50, 0.72) 50%,
+            rgba(4, 20, 50, 0.28) 100%
+        ),
+        url("images/hero.jpg");
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -226,13 +236,20 @@ header {
 }
 
 .hero h1 {
-    color: #ffffff;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+    margin-bottom: 25px;
+    color: var(--white);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
 }
 
 .hero p {
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    max-width: 690px;
+    margin-bottom: 36px;
+    color: rgba(255, 255, 255, 0.84);
+    font-size: 1.08rem;
 }
 
 .hero-buttons {
@@ -636,4 +653,3 @@ footer a:hover {
         gap: 40px;
     }
 }
-
