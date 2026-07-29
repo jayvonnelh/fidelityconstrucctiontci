@@ -1884,3 +1884,35 @@ footer a:hover {
         width: 100%;
     }
 }
+.services-page-hero {
+    display: block !important;
+    min-height: 620px !important;
+    margin-top: 90px !important;
+
+    background:
+        linear-gradient(
+            rgba(4, 20, 50, 0.75),
+            rgba(4, 20, 50, 0.75)
+        ),
+        url("../images/hero.jpg") center / cover no-repeat !important;
+}
+
+.services-hero-overlay {
+    display: flex !important;
+    min-height: 620px !important;
+    align-items: center !important;
+}
+
+.services-hero-content {
+    width: 90% !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+}
+
+.services-hero-content h1 {
+    color: white !important;
+}
+
+.services-hero-content p {
+    color: white !important;
+}
