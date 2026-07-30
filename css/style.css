@@ -2235,3 +2235,209 @@ footer a:hover {
         width: 100%;
     }
 }
+/* ==================================================
+   MODERN APARTMENT GALLERY
+================================================== */
+
+.apartment-gallery-section {
+    background-color: var(--white);
+}
+
+
+/* Project information */
+
+.apartment-project-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 40px;
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.apartment-project-detail {
+    padding: 24px 30px;
+    border-right: 1px solid var(--light-gray);
+}
+
+.apartment-project-detail:last-child {
+    border-right: 0;
+}
+
+.apartment-project-detail span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--medium-gray);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.apartment-project-detail strong {
+    color: var(--navy-blue);
+    font-family: var(--heading-font);
+    font-size: 1rem;
+}
+
+
+/* Seven-image grid */
+
+.project-photo-grid-seven {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 285px;
+    gap: 20px;
+}
+
+
+/* Main exterior image */
+
+.apartment-gallery-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/* Wide courtyard image */
+
+.apartment-gallery-wide {
+    grid-column: span 2;
+}
+
+
+/* Gallery cards */
+
+.project-photo-grid-seven .project-photo {
+    position: relative;
+    min-height: 285px;
+    overflow: hidden;
+    background-color: var(--navy-blue);
+}
+
+.project-photo-grid-seven .project-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+
+/* Adjust portrait image framing */
+
+.project-photo-grid-seven .project-photo:nth-child(2) img {
+    object-position: center;
+}
+
+.project-photo-grid-seven .project-photo:nth-child(3) img {
+    object-position: center;
+}
+
+.project-photo-grid-seven .project-photo:nth-child(4) img {
+    object-position: center;
+}
+
+.project-photo-grid-seven .project-photo:nth-child(5) img {
+    object-position: center;
+}
+
+
+/* Dark caption overlay */
+
+.project-photo-grid-seven .project-photo::after {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(4, 15, 38, 0.9) 100%
+        );
+    content: "";
+    pointer-events: none;
+}
+
+.project-photo-grid-seven .project-photo:hover img {
+    transform: scale(1.06);
+}
+
+
+/* Captions */
+
+.project-photo-grid-seven figcaption {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+    z-index: 2;
+}
+
+.project-photo-grid-seven figcaption span {
+    display: block;
+    margin-bottom: 5px;
+    color: #a8c0ff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.project-photo-grid-seven figcaption strong {
+    display: block;
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+
+/* ==================================================
+   APARTMENT GALLERY RESPONSIVE DESIGN
+================================================== */
+
+@media screen and (max-width: 1050px) {
+
+    .project-photo-grid-seven {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .apartment-gallery-featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .apartment-gallery-wide {
+        grid-column: span 2;
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+
+    .apartment-project-details {
+        grid-template-columns: 1fr;
+    }
+
+    .apartment-project-detail {
+        border-right: 0;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .apartment-project-detail:last-child {
+        border-bottom: 0;
+    }
+
+    .project-photo-grid-seven {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 340px;
+    }
+
+    .apartment-gallery-featured,
+    .apartment-gallery-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .project-photo-grid-seven .project-photo {
+        min-height: 340px;
+    }
+}
